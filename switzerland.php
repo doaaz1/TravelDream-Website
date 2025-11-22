@@ -1,39 +1,4 @@
-<?php
-include("includes/db_connect.php");
-
-/* ==== دالة جلب التلميحات ==== */
-function get_tips($conn, $country_code) {
-    $sql = "SELECT username, tip_text FROM tips WHERE country_code = '$country_code' ORDER BY id DESC";
-    $result = $conn->query($sql);
-
-    $tips = [];
-    if ($result && $result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $tips[] = $row;
-        }
-    }
-    return $tips;
-}
-
-/* ==== دالة إضافة تلميح ==== */
-function add_tip($conn, $username, $tip_text, $country_code) {
-    $username = $conn->real_escape_string($username);
-    $tip_text = $conn->real_escape_string($tip_text);
-
-    $sql = "INSERT INTO tips (username, tip_text, country_code)
-            VALUES ('$username', '$tip_text', '$country_code')";
-    return $conn->query($sql);
-}
-
-/* ==== تنفيذ الإرسال ==== */
-if (isset($_POST['send_tip'])) {
-    $name = $_POST['username'];
-    $tip  = $_POST['tip_text'];
-
-    if (!empty($name) && !empty($tip)) {
-        add_tip($conn, $name, $tip, "SW");
-    }
-}
+<?php include("includes/db_connect.php"); ?>
 ?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -127,35 +92,66 @@ if (isset($_POST['send_tip'])) {
     </div>
 
     <!-- قسم التلميحات -->
-    <div id="tips" class="section-box">
-        <h2>تلميحات الزوار</h2>
-        <p class="section-note">اكتب تلميح بسيط يساعد أي زائر جديد</p>
+<div id="tips" class="section-box">
+    <h2>تلميحات الزوار</h2>
+    <p class="section-note">شارك تلميح بسيط يساعد أي زائر جديد</p>
 
-        <form method="POST" class="item-card tip-form">
-            <label>اسمك:
-                <input type="text" name="username" required placeholder="مثال: سمية">
-            </label>
+    <!-- نموذج الإرسال -->
+    <form method="POST" class="item-card" style="margin-bottom: 15px;">
+        
+        <label>اسمك:
+            <input type="text" name="username" required placeholder="مثال: سمية">
+        </label>
 
-            <label>تلميحك:
-                <textarea name="tip_text" rows="3" required placeholder="مثال: احجزي القطار مبكرًا!"></textarea>
-            </label>
+        <label>تلميحك:
+            <textarea name="tip_text" required rows="3" placeholder="مثال: احجزي القطار مبكرًا!"></textarea>
+        </label>
 
-            <button type="submit" name="send_tip">إرسال</button>
-        </form>
+        <button type="submit" name="send_tip">إرسال التلميح</button>
+    </form>
 
-        <div class="tips-list">
+    <!-- معالجة الإرسال -->
+    <?php
+        if (isset($_POST['send_tip'])) {
+            $username = $_POST['username'];
+            $tip      = $_POST['tip_text'];
+
+            $username = $conn->real_escape_string($username);
+            $tip      = $conn->real_escape_string($tip);
+
+            $sql = "INSERT INTO tips (username, tip_text, country_code)
+                    VALUES ('$username', '$tip', 'SW')";
+            
+            $conn->query($sql);
+        }
+    ?>
+
+    <!-- عرض التلميحات -->
+    <div class="tips-list">
         <?php
-            $tips = get_tips($conn, "SW");
-            foreach ($tips as $row) {
-                echo "
-                <div class='tip-card'>
-                    <strong>{$row['username']}</strong>
-                    <p>{$row['tip_text']}</p>
-                </div>";
+            $result = $conn->query("SELECT username, tip_text 
+                                    FROM tips 
+                                    WHERE country_code='SW'
+                                    ORDER BY id DESC");
+
+            if ($result->num_rows > 0) {
+
+                while ($row = $result->fetch_assoc()) {
+
+                    echo "
+                    <div class='tip-card'>
+                        <strong>{$row['username']}</strong>
+                        <p>{$row['tip_text']}</p>
+                    </div>";
+                }
+
+            } else {
+                echo "<p class='section-note'>لا توجد تلميحات بعد </p>";
             }
         ?>
-        </div>
     </div>
+</div>
+   
 
 </div>
 
