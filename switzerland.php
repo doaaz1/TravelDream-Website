@@ -1,19 +1,19 @@
 <?php include("includes/db_connect.php"); ?>
-?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>سويسرا - TravelDream</title>
-    <link rel="stylesheet" href="sw.css">
+    <link rel="stylesheet" href="css/sw.css">
 </head>
 
 <body>
 
-<header class="header-box" style="background-image:url('images/switzerland/3.jpg');">
-    <div class="header-content container">
+<!-- ================== الهيدر ================== -->
+<header class="hero" style="background-image:url('images/switzerland/3.jpg');">
+    <div class="hero-overlay container">
 
-        <div class="header-top">
+        <div class="hero-top">
             <div class="brand">TravelDream</div>
             <nav>
                 <a href="index.php">الرئيسية</a>
@@ -23,16 +23,17 @@
             </nav>
         </div>
 
-        <div class="header-text">
-            <p class="header-label">رحلة إلى</p>
+        <div class="hero-text">
+            <p class="hero-label">رحلة إلى</p>
             <h1>سويسرا - Switzerland</h1>
-            <p class="header-desc">بلد الجبال والثلوج … هدوء ما بعده هدوء</p>
+            <p class="hero-desc">بلد الجبال والثلوج … هدوء ما بعده هدوء</p>
         </div>
 
     </div>
 </header>
 
 
+<!-- ================== المحتوى ================== -->
 <div class="container main-content">
 
     <!-- الأماكن السياحية -->
@@ -43,7 +44,7 @@
         <div class="items-grid">
 
             <div class="item-card">
-                <img src="images/switzerland/matternhorn.jpg" class="item-img">
+                <img src="images/switzerland/matterhorn.jpg" class="item-img">
                 <h3>جبل ماترهورن</h3>
                 <p>جبل مشهور بشكله المثالي لمحبي التصوير.</p>
             </div>
@@ -91,68 +92,60 @@
         </div>
     </div>
 
-    <!-- قسم التلميحات -->
-<div id="tips" class="section-box">
-    <h2>تلميحات الزوار</h2>
-    <p class="section-note">شارك تلميح بسيط يساعد أي زائر جديد</p>
+    <!-- ================== قسم التلميحات ================== -->
+    <div id="tips" class="section-box">
+        <h2>تلميحات الزوار</h2>
+        <p class="section-note">شارك تلميح بسيط يساعد أي زائر جديد</p>
 
-    <!-- نموذج الإرسال -->
-    <form method="POST" class="item-card" style="margin-bottom: 15px;">
-        
-        <label>اسمك:
-            <input type="text" name="username" required placeholder="مثال: سمية">
-        </label>
-
-        <label>تلميحك:
-            <textarea name="tip_text" required rows="3" placeholder="مثال: احجزي القطار مبكرًا!"></textarea>
-        </label>
-
-        <button type="submit" name="send_tip">إرسال التلميح</button>
-    </form>
-
-    <!-- معالجة الإرسال -->
-    <?php
-        if (isset($_POST['send_tip'])) {
-            $username = $_POST['username'];
-            $tip      = $_POST['tip_text'];
-
-            $username = $conn->real_escape_string($username);
-            $tip      = $conn->real_escape_string($tip);
-
-            $sql = "INSERT INTO tips (username, tip_text, country_code)
-                    VALUES ('$username', '$tip', 'SW')";
+        <!-- نموذج الإرسال -->
+        <form method="POST" class="item-card tips-form">
             
-            $conn->query($sql);
-        }
-    ?>
+            <label>اسمك:
+                <input type="text" name="username" required placeholder="مثال: سمية">
+            </label>
 
-    <!-- عرض التلميحات -->
-    <div class="tips-list">
-        <?php
-            $result = $conn->query("SELECT username, tip_text 
-                                    FROM tips 
-                                    WHERE country_code='SW'
-                                    ORDER BY id DESC");
+            <label>تلميحك:
+                <textarea name="tip_text" required rows="3" placeholder="مثال: احجزي القطار مبكرًا!"></textarea>
+            </label>
 
-            if ($result->num_rows > 0) {
+            <button type="submit" name="send_tip">إرسال التلميح</button>
+        </form>
 
-                while ($row = $result->fetch_assoc()) {
+        <!-- PHP: حفظ التلميح -->
+      <?php
+if (isset($_POST['send_tip'])) {
 
-                    echo "
-                    <div class='tip-card'>
-                        <strong>{$row['username']}</strong>
-                        <p>{$row['tip_text']}</p>
-                    </div>";
-                }
+    $name = $_POST['username'];
+    $tip  = $_POST['tip_text'];
 
-            } else {
-                echo "<p class='section-note'>لا توجد تلميحات بعد </p>";
-            }
-        ?>
+    // استخدام اسم العمود الصحيح وهو country
+    $sql = "INSERT INTO tips (username, tip_text, country)
+            VALUES ('$name', '$tip', 'SW')";
+
+    if ($conn->query($sql)) {
+        echo "<p>✔ تم حفظ تلميحك بنجاح!</p>";
+    } else {
+        echo "<p>❌ خطأ: " . $conn->error . "</p>";
+    }
+}
+?>
+        <!-- عرض التلميحات -->
+        <h3>تلميحات الزوار السابقة:</h3>
+       <?php
+$result = $conn->query("SELECT username, tip_text FROM tips WHERE country='SW' ORDER BY id DESC");
+
+if ($result->num_rows > 0) {
+    echo "<div class='tips-list'>";
+    while ($row = $result->fetch_assoc()) {
+        echo "<div class='tip-item'><strong>{$row['username']}</strong><p>{$row['tip_text']}</p></div>";
+    }
+    echo "</div>";
+} else {
+    echo "<p>لا توجد تلميحات بعد</p>";
+}
+?>
+
     </div>
-</div>
-   
-
 </div>
 
 

@@ -1,19 +1,19 @@
-//  تأثير ثلج بسيط وواقعي
-function createSnow() {
-    const snow = document.createElement("div");
-    snow.classList.add("snowflake");
 
-    // حجم عشوائي 
-    const size = Math.random() * 4 + 3;
-    snow.style.width = size + "px";
-    snow.style.height = size + "px";
+    function createSnow() {
+        const snow = document.createElement("div");
+        snow.classList.add("snowflake");
 
-    snow.style.left = Math.random() * window.innerWidth + "px";
-    snow.style.animationDuration = (4 + Math.random() * 4) + "s";
+        const size = Math.random() * 4 + 2; // من 2 إلى 6px
+        snow.style.width = `${size}px`;
+        snow.style.height = `${size}px`;
 
-    document.body.appendChild(snow);
+        snow.style.left = Math.random() * window.innerWidth + "px";
 
-    setTimeout(() => snow.remove(), 9000);
-}
+        snow.style.animationDuration = (3 + Math.random() * 4) + "s";
 
-setInterval(createSnow, 700);
+        document.body.appendChild(snow);
+
+        setTimeout(() => snow.remove(), 7000);
+    }
+
+    setInterval(createSnow, 200);
