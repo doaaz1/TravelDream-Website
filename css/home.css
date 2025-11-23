@@ -23,16 +23,25 @@
     }
 
 
-    .entry {
+.entry {
   height: 100vh; /* يغطي كامل ارتفاع الشاشة */
-  background-image: url('saudi5.jpg');
-  background-size: cover; /* تغطي الصورة كامل المساحة */
-  background-position: center; /* الصورة في المنتصف */
   display: flex;
   justify-content: center; /* توسيط المحتوى أفقياً */
-  align-items: center;     /* توسيط المحتوى عمودياً */
+  align-items: center; /* توسيط المحتوى عمودياً */
   text-align: center;
-  color: white;          /* النص أبيض فوق الصورة */
+  color: white; /* النص أبيض فوق الصورة */
+  position: relative; /* للسماح للصورة بالتداخل مع المحتوى */
+}
+
+
+.entry img {
+  position: absolute; /* وضع الصورة في الخلف */
+  top: 0;
+  left: 0;
+  width: 100%; /* تغطي كامل المساحة */
+  height: 100%;
+  object-fit: cover; /* الحفاظ على نسب الصورة */
+  z-index: -1; /* وضع الصورة خلف المحتوى */
 }
 
 .entry-content h1 {/* يعطي وضوح للنص فوق الصورة */

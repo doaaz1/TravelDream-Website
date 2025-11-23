@@ -29,7 +29,7 @@
    <div class="overlay">
     <h1>Contact Us</h1>
   </div>
-        <img src="Switzerland3.jpg" alt="">
+        <img src="images/Contact/Switzerland3.jpg" alt="">
         <h2 id="conh2"> تواصل معنا </h2>
     </div>
 

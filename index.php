@@ -24,6 +24,7 @@
   </header>
 <!-- END nav -->
 <section class="entry">
+  <img src="images/home/saudi5.jpg" alt="">
   <div class="entry-content">
     <h1>سافر بعقلك</h1>
      <p>اكتشف الأجواء قبل أن تنطلق في رحلتك</p>
@@ -42,7 +43,7 @@
 
     <div class="card">
       <a href="japan.php" class="links">
-        <img src="japan1.jpg" alt="اليابان">
+        <img src="images/home/japan1.jpg" alt="اليابان">
         <div class="box">
             <h3>اليابان</h3>
             <p>استمتع بتجربة ثقافية غنية تجمع بين التقليد والحداثة</p>
@@ -53,7 +54,7 @@
 
     <div class="card">
       <a href="saudi.php" class="links">
-        <img src="saudi3.jpg" alt="السعوديه">
+        <img src="images/home/saudi3.jpg" alt="السعوديه">
         <div class="box">
             <h3>السعودية</h3>
             <p>رحلة عبر التاريخ والثقافة مع المعالم السياحية في مكة والمدينة</p>
@@ -64,7 +65,7 @@
 
     <div class="card">
       <a href="switzerland.php" class="links">
-        <img src="Switzerland1.jpg" alt="سويسرا">
+        <img src="images/home/Switzerland1.jpg" alt="سويسرا">
         <div class="box">
             <h3>سويسرا</h3>
             <p>اكتشف جمال جبال الألب الساحرة والأنشطة الجبلية المتنوعة</p>
