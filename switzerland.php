@@ -18,8 +18,8 @@
             <nav>
                 <a href="index.php">الرئيسية</a>
                 <a href="switzerland.php" class="active">سويسرا</a>
-                <a href="#">اليابان</a>
-                <a href="#">السعودية</a>
+                <a href="japan.php">اليابان</a>
+                <a href="saudi.php">السعودية</a>
             </nav>
         </div>
 
