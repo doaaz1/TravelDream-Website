@@ -1,7 +1,7 @@
 <?php include("includes/db_connect.php"); ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 
 <head>
   <title>TravelDream</title>
@@ -14,9 +14,9 @@
     <nav>
       <ul>
         <li><a href="index.php">الرئيسية</a></li>
+        <li><a href="switzerland.php">سويسرا</a></li>
         <li><a href="japan.php">اليابان</a></li>
         <li><a href="saudi.php">السعودية</a></li>
-        <li><a href="switzerland.php">سويسرا</a></li>
         <li><a href="contact.php">اتصل بنا</a></li>
 
       </ul>
