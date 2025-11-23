@@ -9,7 +9,7 @@
 
 <body>
 
-<!-- ================== الهيدر ================== -->
+<!--  الهيدر  -->
 <header class="hero" style="background-image:url('images/switzerland/3.jpg');">
     <div class="hero-overlay container">
 
@@ -33,7 +33,7 @@
 </header>
 
 
-<!-- ================== المحتوى ================== -->
+<!--  المحتوى  -->
 <div class="container main-content">
 
     <!-- الأماكن السياحية -->
@@ -73,14 +73,13 @@
 
             <div class="item-card">
                 <img src="images/switzerland/fondue.jpg" class="item-img">
-                <h3>فوندو الجبن</h3>
-                <p>جبن ذائب يُقدم ساخن مع الخبز.</p>
+                <h3>روستي</h3>
+                <p> بطاطس مبشورة محمرة بطريقة لذيذة.</p>
             </div>
-
             <div class="item-card">
                 <img src="images/switzerland/rosti.jpg" class="item-img">
-                <h3>روستي</h3>
-                <p>بطاطس مبشورة محمرة بطريقة لذيذة.</p>
+                <h3>فوندو الجبن</h3>
+                <p> جبن ذائب يُقدم ساخن مع الخبز. </p>
             </div>
 
             <div class="item-card">
@@ -92,10 +91,10 @@
         </div>
     </div>
 
-    <!-- ================== قسم التلميحات ================== -->
+    <!-- قسم النصائح  -->
     <div id="tips" class="section-box">
-        <h2>تلميحات الزوار</h2>
-        <p class="section-note">شارك تلميح بسيط يساعد أي زائر جديد</p>
+        <h2>نصائح الزوار</h2>
+        <p class="section-note">شارك نصيحة بسيطة تساعد أي زائر جديد</p>
 
         <!-- نموذج الإرسال -->
         <form method="POST" class="item-card tips-form">
@@ -104,21 +103,20 @@
                 <input type="text" name="username" required placeholder="مثال: سمية">
             </label>
 
-            <label>تلميحك:
+            <label>تعليقك:
                 <textarea name="tip_text" required rows="3" placeholder="مثال: احجزي القطار مبكرًا!"></textarea>
             </label>
 
-            <button type="submit" name="send_tip">إرسال التلميح</button>
+            <button type="submit" name="send_tip">إرسال </button>
         </form>
 
-        <!-- PHP: حفظ التلميح -->
+        <!--  حفظ  -->
       <?php
 if (isset($_POST['send_tip'])) {
 
     $name = $_POST['username'];
     $tip  = $_POST['tip_text'];
 
-    // استخدام اسم العمود الصحيح وهو country
     $sql = "INSERT INTO tips (username, tip_text, country)
             VALUES ('$name', '$tip', 'SW')";
 
@@ -129,7 +127,7 @@ if (isset($_POST['send_tip'])) {
     }
 }
 ?>
-        <!-- عرض التلميحات -->
+        <!-- عرض  -->
         <h3>تلميحات الزوار السابقة:</h3>
        <?php
 $result = $conn->query("SELECT username, tip_text FROM tips WHERE country='SW' ORDER BY id DESC");
@@ -150,7 +148,7 @@ if ($result->num_rows > 0) {
 
 
 <footer class="footer">
-    © TravelDream
+   2025 © TravelDream
 </footer>
 
 <script src="sw.js"></script>

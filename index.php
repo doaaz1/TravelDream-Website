@@ -1,4 +1,25 @@
 <?php include("includes/db_connect.php"); ?>
+<?php
+
+// إذا تم إرسال نموذج خطة الرحلة
+if (isset($_POST['submit_plan'])) {
+
+    $country = $_POST['country'];
+    $start   = $_POST['start'];
+    $end     = $_POST['end'];
+    $budget  = $_POST['budget'];
+
+    $sql = "INSERT INTO trip_plans (country, start_date, end_date, budget)
+            VALUES ('$country', '$start', '$end', '$budget')";
+
+    if (!$conn->query($sql)) {
+        echo "<p>خطأ في حفظ الخطة: " . $conn->error . "</p>";
+    }
+} 
+// جلب آخر 3 خطط
+$plans_result = $conn->query("SELECT * FROM trip_plans ORDER BY id DESC LIMIT 3");
+?>
+
 
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -7,6 +28,7 @@
   <title>TravelDream</title>
 
 <link rel="stylesheet" href="css/home.css">
+
 </head>
 
 <body>
@@ -27,15 +49,15 @@
   <img src="images/home/saudi5.jpg" alt="">
   <div class="entry-content">
     <h1>سافر بعقلك</h1>
-     <p>اكتشف الأجواء قبل أن تنطلق في رحلتك</p>
+     <p>  وجهات تحلم بها وتجارب تستحق أن تُروى ... اختر مغامرتك القادمة</p>
    <!-- <p>رحلة خفيفة تخليك تتخيل الأجواء قبل ما تسافر فعليًا.</p>-->
    <!-- <a href="#destinations" class="btn">START</a> -->
   </div>
 </section>
 
 <section class="intro">
-    <h2>اكتشف وجهاتنا السياحية المميزة</h2>
-    <p> نقدم لك فرصة فريدة لاستكشاف ثلاث من أفضل الوجهات السياحية في العالم. سواء كنت تخطط للزيارة أو تحلم بالتجربة، ستتمكن من اكتشاف الأجواء الفريدة لكل من اليابان، سويسرا، و السعودية قبل أن تنطلق في مغامرتك  </p>
+    <h2>استكشف جمال العالم من خلال وجهاتنا المختارة</h2>
+    <p>ثلاث وجهات ملهمة ، ثقافات مختلفة، طبيعة ساحرة، وتجارب لا تُنسى. اختر رحلتك وابدأ مغامرتك الآن  </p>
  
 </section>
 
@@ -68,7 +90,7 @@
         <img src="images/home/Switzerland1.jpg" alt="سويسرا">
         <div class="box">
             <h3>سويسرا</h3>
-            <p>اكتشف جمال جبال الألب الساحرة والأنشطة الجبلية المتنوعة</p>
+            <p> وجهة مثالية لعشّاق الطبيعة حيث الهدوء يلتقي بروعة المناظر الجبلية</p>
             <a href="switzerland.php" class="btn">اكتشف المزيد</a> 
           </div>
       </a>
@@ -79,7 +101,73 @@
 </div>
 <!-- END card -->
 
+<!-- قسم خطة الرحلة -->
+<div class="trip-box">
 
+    <h2 class="trip-title">خطة رحلتك</h2>
+    <p class="trip-intro">دوّني حلم رحلتك .. </p>
+
+    <!-- نموذج الخطة -->
+    <form method="POST" class="trip-form">
+
+        <div class="trip-field">
+            <label>الدولة:</label>
+            <select name="country" required>
+                <option value="JP">اليابان</option>
+                <option value="SA">السعودية</option>
+                <option value="SW">سويسرا</option>
+            </select>
+        </div>
+
+        <div class="trip-row">
+            <div class="trip-field">
+                <label>تاريخ البداية:</label>
+                <input type="date" name="start" required>
+            </div>
+
+            <div class="trip-field">
+                <label>تاريخ النهاية:</label>
+                <input type="date" name="end" required>
+            </div>
+        </div>
+
+        <div class="trip-field">
+            <label>الميزانية:</label>
+            <input type="number" name="budget" required placeholder="مثال: 3500">
+        </div>
+
+        <button type="submit" name="submit_plan" class="trip-btn">إرسال الخطة</button>
+    </form>
+
+    <h3 class="trip-last-title">آخر الخطط:</h3>
+
+    <div class="trip-list">
+        <?php
+if ($plans_result->num_rows > 0) {
+
+    while ($p = $plans_result->fetch_assoc()) {
+
+        echo "
+        <div class='trip-card'>
+            <p><strong>الدولة:</strong> <span>{$p['country']}</span></p>
+            <p><strong>الفترة:</strong> 
+                <span>{$p['start_date']} → {$p['end_date']}</span>
+            </p>
+            <p><strong>الميزانية:</strong> <span>{$p['budget']} ريال</span></p>
+        </div>";
+    }
+
+} else {
+    echo "<p>لا توجد خطط حتى الآن</p>";
+}
+?> 
+    </div>
+
+</div>
+
+<footer >
+    <p>TravelDream © 2025</p>
+</footer>
 
 </body>
 </html>

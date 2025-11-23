@@ -1,4 +1,4 @@
-/* ===== الخطوط ===== */
+/*  الخطوط  */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Tajawal:wght@300;400;700&display=swap');
 
 * {
@@ -13,13 +13,12 @@ html, body {
     background: #e0f2fe;
 }
 
-/* ===== الحاوية ===== */
 .container {
     width: min(1100px, 95%);
     margin: 0 auto;
 }
 
-/* ====== الهيدر (Hero Plus) ====== */
+/*  الهيدر (Hero )  */
 .hero {
     position: relative;
     height: 280px;
@@ -90,7 +89,7 @@ nav a.active {
     margin: 0;
 }
 
-/* ====== الأقسام ====== */
+/*  الأقسام  */
 .section-box {
     margin: 35px 0;
 }
@@ -100,7 +99,7 @@ nav a.active {
     margin-bottom: 15px;
 }
 
-/* ====== البطاقات ====== */
+/*  البطاقات  */
 .items-grid {
     display: grid;
     gap: 20px;
@@ -129,7 +128,7 @@ nav a.active {
     margin-bottom: 10px;
 }
 
-/* ====== قسم التلميحات ====== */
+/*  قسم النصائح  */
 .tips-form input,
 .tips-form textarea {
     width: 100%;
@@ -162,11 +161,11 @@ nav a.active {
     margin-bottom: 12px;
 }
 
-/* ====== رسائل النجاح والخطأ ====== */
+/*  رسائل النجاح والخطأ  */
 .success-msg { color: #047857; font-weight: bold; }
 .error-msg   { color: #b91c1c; font-weight: bold; }
 
-/* ====== الفوتر ====== */
+/*  الفوتر  */
 .footer {
     text-align: center;
     padding: 20px;

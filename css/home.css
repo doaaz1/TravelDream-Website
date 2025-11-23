@@ -163,5 +163,158 @@
     font-size: 14px;
 }
 
+/*
+ خطة الرحلة
+    */
+/* صندوق كامل */
+.trip-box {
+    background: #ffffffee;
+    padding: 30px;
+    border-radius: 20px;
+    width: min(800px, 95%);
+    margin: 50px auto;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(4px);
+}
 
+/* عنوان القسم */
+.trip-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2f2f2f;
+    margin-bottom: 10px;
+}
 
+/* جملة قصيرة جذابة */
+.trip-intro {
+    text-align: center;
+    background: linear-gradient(to right, #f6f1e9, #fdfcf9);
+    padding: 12px 18px;
+    margin: 18px auto 28px;
+    font-size: 1.2rem;
+    color: #5c4a2e;
+    border-radius: 12px;
+    border: 1px solid #eae4da;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 90%;
+    line-height: 1.8;
+}
+.trip-intro::before,
+.trip-intro::after {
+    content: "✨";
+    opacity: 0.7;
+    margin: 0 6px;
+}
+
+/* الحقول */
+.trip-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.trip-field label {
+    font-weight: 600;
+    color: #3d3d3d;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.trip-field input,
+.trip-field select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d6c7b4;
+    font-size: 1rem;
+    background: #faf7f2;
+    transition: 0.25s ease;
+}
+
+.trip-field input:focus,
+.trip-field select:focus {
+    border-color: #b08c5a;
+    box-shadow: 0 0 8px rgba(176, 140, 90, 0.2);
+    outline: none;
+}
+
+/* صفين */
+.trip-row {
+    display: flex;
+    gap: 15px;
+}
+.trip-row .trip-field {
+    flex: 1;
+}
+
+/* زر الإرسال */
+.trip-btn {
+    padding: 13px;
+    background: linear-gradient(135deg, #8c5e28, #b88749);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.25s ease;
+    letter-spacing: 0.5px;
+}
+
+.trip-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(176, 140, 90, 0.3);
+}
+
+/* القسم السفلي — آخر 3 خطط */
+.trip-last-title {
+    margin-top: 40px;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3b352c;
+}
+
+.trip-list {
+    display: grid;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.trip-card {
+    background: #fffaf2;
+    border: 1px solid #eadfcc;
+    padding: 15px 18px;
+    border-radius: 14px;
+    transition: 0.25s ease;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.trip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.trip-card p {
+    margin: 6px 0;
+    color: #4a4337;
+    font-size: 1rem;
+}
+
+.trip-empty {
+    color: #7d7d7d;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* للجوال */
+@media(max-width:600px) {
+    .trip-row {
+        flex-direction: column;
+    }
+
+    .trip-title {
+        font-size: 1.6rem;
+    }
+}

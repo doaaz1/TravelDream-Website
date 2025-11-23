@@ -1,9 +1,9 @@
-
+//حركه الثلج 
     function createSnow() {
         const snow = document.createElement("div");
         snow.classList.add("snowflake");
 
-        const size = Math.random() * 4 + 2; // من 2 إلى 6px
+        const size = Math.random() * 4 + 2; 
         snow.style.width = `${size}px`;
         snow.style.height = `${size}px`;
 
