@@ -1,0 +1,158 @@
+ body {
+      font-family: Arial;
+      margin: 0;
+    }
+
+    header {
+      
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav ul {
+      display: flex;/* يحوّل القائمة لصف */
+      gap: 30px;
+      list-style: none;
+      justify-content: center;/* يوسّط العناصر */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+    }
+
+
+    .entry {
+  height: 100vh; /* يغطي كامل ارتفاع الشاشة */
+  background-image: url('saudi5.jpg');
+  background-size: cover; /* تغطي الصورة كامل المساحة */
+  background-position: center; /* الصورة في المنتصف */
+  display: flex;
+  justify-content: center; /* توسيط المحتوى أفقياً */
+  align-items: center;     /* توسيط المحتوى عمودياً */
+  text-align: center;
+  color: white;          /* النص أبيض فوق الصورة */
+}
+
+.entry-content h1 {/* يعطي وضوح للنص فوق الصورة */
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+} 
+.entry-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+  .entry-content .btn {
+    text-decoration: none;
+    background-color: #0a0b0c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .entry-content .btn:hover {
+    background-color: #0d1114;
+  }
+ 
+  .gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+     margin-top:80px; 
+    margin-bottom: 100px;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background: #fff;
+    margin-top: 50px; 
+    margin-bottom: 100px;
+    transition: transform 0.3s ease;
+    text-align: center; 
+    cursor: pointer; /* يجعل الكارد تظهر كعنصر قابل للنقر */
+    
+}
+
+.card:hover {
+   transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.box {
+    padding: 15px;
+    background: white;
+}
+
+.box h3 {
+      font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.box p {
+    color: #555;
+    margin-top: 5px;
+}
+
+.nav-item {
+  margin-bottom: -1px; 
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: center; 
+
+
+  }
+
+  /* تنسيق الروابط داخل الكارد */
+.links {
+    text-decoration: none;
+}
+
+/* تنسيق الزر داخل الكارد */
+.card .btn {
+    display: inline-block;
+    background-color: #c9936e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+
