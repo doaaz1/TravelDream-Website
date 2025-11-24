@@ -1,16 +1,15 @@
 /*  الخطوط  */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Tajawal:wght@300;400;700&display=swap');
 
-* {
-    box-sizing: border-box;
-}
+/*  الأساسيات  */
+* { box-sizing: border-box; }
 
 html, body {
     margin: 0;
     padding: 0;
     direction: rtl;
     font-family: 'Tajawal','Cairo', sans-serif;
-    background: #e0f2fe;
+    background: #e0f2fe; /* خلفية سماوية */
 }
 
 .container {
@@ -18,13 +17,12 @@ html, body {
     margin: 0 auto;
 }
 
-/*  الهيدر (Hero )  */
+/*  الهيدر  */
 .hero {
     position: relative;
     height: 280px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     overflow: hidden;
     color: #fff;
 }
@@ -63,7 +61,6 @@ nav a {
     margin-left: 12px;
     color: #eaf4ff;
     text-decoration: none;
-    font-size: 1rem;
 }
 
 nav a:hover,
@@ -73,10 +70,6 @@ nav a.active {
 
 .hero-text {
     margin-top: 45px;
-}
-
-.hero-label {
-    opacity: 0.9;
 }
 
 .hero-text h1 {
@@ -90,90 +83,106 @@ nav a.active {
 }
 
 /*  الأقسام  */
-.section-box {
-    margin: 35px 0;
-}
+.section-box { margin: 40px 0; }
 
 .section-note {
     color: #6b7280;
     margin-bottom: 15px;
 }
 
-/*  البطاقات  */
+/*  بطاقات الأماكن والأكلات  */
 .items-grid {
     display: grid;
-    gap: 20px;
+    gap: 22px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .item-card {
-    background: #fff;
-    border-radius: 14px;
-    padding: 12px;
-    border: 1px solid #dde7f5;
-    box-shadow: 0 4px 10px rgba(15,23,42,0.1);
-    transition: 0.25s;
+    background: #fff9f3; /* بيج  */
+    border-radius: 16px;
+    padding: 14px;
+    border: 1px solid #e7dccc;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: .25s ease;
 }
 
 .item-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(15,23,42,0.18);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
 .item-img {
     width: 100%;
     height: 170px;
-    border-radius: 10px;
     object-fit: cover;
-    margin-bottom: 10px;
-}
-
-/*  قسم النصائح  */
-.tips-form input,
-.tips-form textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 8px;
-    border: 1px solid #cfe2ff;
-    margin-bottom: 8px;
-    font-family: inherit;
-}
-
-.tips-form button {
-    width: 100%;
-    padding: 10px;
-    background: #0f766e;
-    border: none;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.tips-list {
-    margin-top: 15px;
-}
-
-.tip-item {
-    background: #f8fbff;
-    border: 1px solid #d7e4ff;
-    padding: 12px;
     border-radius: 12px;
     margin-bottom: 12px;
 }
 
-/*  رسائل النجاح والخطأ  */
+/*  صندوق النصائح  */
+#tips.section-box {
+    background: #fff8ef;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    border: 1px solid #e3d6c7;
+}
+
+/*  نموذج النصائح  */
+#tips form.item-card {
+    background: #ffffff;
+    border: 1px solid #e6d9c9;
+    padding: 18px;
+    border-radius: 14px;
+}
+
+#tips input,
+#tips textarea {
+    background: #fffdf9;
+    border: 1px solid #e6d8c8;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    font-family: inherit;
+}
+
+#tips button {
+    background: #8b5e34;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: .25s ease;
+}
+
+#tips button:hover { background: #704523; }
+
+/*  النصائح القديمة  */
+.tip-item {
+    background: #fffdf7;
+    border: 1px solid #e8dccd;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+/*  رسائل النظام  */
 .success-msg { color: #047857; font-weight: bold; }
 .error-msg   { color: #b91c1c; font-weight: bold; }
 
 /*  الفوتر  */
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     color: #868686;
     font-size: 0.85rem;
+    margin-top: 40px;
 }
 
-/* ثلج واقعي */
+/*  الثلج  */
 .snowflake {
     position: fixed;
     top: -10px;
@@ -186,12 +195,11 @@ nav a.active {
 }
 
 @keyframes fall {
-    0% {
-        transform: translateY(0) translateX(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(110vh) ;
-        opacity: 0.3;
-    }
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(110vh); opacity: .3; }
+}
+
+/*  للجوال  */
+@media(max-width:600px) {
+    .items-grid { gap: 16px; }
 }
