@@ -23,8 +23,7 @@ while($row = mysqli_fetch_assoc($res)) {
     <meta charset="UTF-8">
     <title>Explore Saudi Arabia!</title>
     <link rel="stylesheet" href="css/sa.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-     rel="stylesheet">
+    
 </head>
 <body>
 <!-- قسم الهيدر -->
@@ -58,7 +57,7 @@ while($row = mysqli_fetch_assoc($res)) {
         </div>
     </div>
     <div class="landmark-col">
-        <img src="https://i.pinimg.com/736x/44/8d5/d5/448dd5634a0c535d4434c21882dcbd5f.jpg">
+        <img src="images/saudi/abha.jpg">
         <div class="content">
         <h2>أبها</h2>
         <p>عروس الجنوب وسيدة الجمال، تكسوها الغيوم وتحتضنها الجبال. في نسيمها راحة، وفي طبيعتها لوحة لا تُنسى.</p>
