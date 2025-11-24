@@ -5,7 +5,7 @@
 
 <head>
   <title>Contact</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/contact.css">
 </head>
 
