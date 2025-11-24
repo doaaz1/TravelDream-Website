@@ -151,6 +151,6 @@ if ($result->num_rows > 0) {
    2025 © TravelDream
 </footer>
 
-<script src="sw.js"></script>
+<script src="css/js/sw.js"></script>
 </body>
 </html>
