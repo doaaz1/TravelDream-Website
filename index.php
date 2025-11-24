@@ -32,7 +32,7 @@ $plans_result = $conn->query("SELECT * FROM trip_plans ORDER BY id DESC LIMIT 3"
 </head>
 
 <body>
-  <header>
+  <!-- <header>
     <nav>
       <ul>
         <li><a href="index.php">الرئيسية</a></li>
@@ -43,7 +43,8 @@ $plans_result = $conn->query("SELECT * FROM trip_plans ORDER BY id DESC LIMIT 3"
 
       </ul>
     </nav>
-  </header>
+  </header> -->
+
 <!-- END nav -->
 <section class="entry">
   <img src="images/home/saudi5.jpg" alt="">
@@ -105,7 +106,7 @@ $plans_result = $conn->query("SELECT * FROM trip_plans ORDER BY id DESC LIMIT 3"
 <div class="trip-box">
 
     <h2 class="trip-title">خطة رحلتك</h2>
-    <p class="trip-intro">دوّني حلم رحلتك .. </p>
+    <p class="trip-intro">دوّن حلم رحلتك .. </p>
 
     <!-- نموذج الخطة -->
     <form method="POST" class="trip-form">
@@ -165,8 +166,19 @@ if ($plans_result->num_rows > 0) {
 
 </div>
 
-<footer >
-    <p>TravelDream © 2025</p>
+<footer class="main-footer">
+    <div class="footer-content">
+
+        <p class="footer-title">✈️ TravelDream</p>
+
+        <p class="footer-text">
+          نرافقك في رحلتك لاكتشاف أجمل المدن حول العالم
+        </p>
+
+        <a href="contact.php" class="footer-btn">تواصل معنا</a>
+
+        <p class="footer-copy">TravelDream © 2025 </p>
+    </div>
 </footer>
 
 </body>

@@ -307,6 +307,60 @@
     margin-top: 10px;
     text-align: center;
 }
+/* -----------------------------
+      FOOTER DESIGN
+------------------------------*/
+
+.main-footer {
+    margin-top: 60px;
+    background: linear-gradient(135deg, #0f3d3e, #115e59, #0f766e);
+    padding: 40px 20px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 14px 14px 0 0;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.footer-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #fdecc8;
+    color: #0f3d3e;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.25s;
+}
+
+.footer-btn:hover {
+    background-color: #fff1d6;
+    transform: translateY(-3px);
+}
+
+.footer-copy {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
 
 /* للجوال */
 @media(max-width:600px) {
