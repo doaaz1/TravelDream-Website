@@ -1,5 +1,3 @@
-;
-
 // ===== تأثير الميلان مع الماوس للكروت =====
 const tiltCards = document.querySelectorAll(".tilt");
 

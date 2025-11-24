@@ -5,7 +5,7 @@
 
 <head>
   <title>Contact</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/contact.css">
 </head>
 
@@ -30,7 +30,7 @@
     <h1>Contact Us</h1>
   </div>
         <img src="images/Contact/Switzerland3.jpg" alt="">
-        <h2 id="conh2"> تواصل معنا </h2>
+       
     </div>
 
 
@@ -55,6 +55,9 @@
       </div>
 
 
+<footer class="footer">
+   2025 © TravelDream
+</footer>
 
 </body>
 </html>
