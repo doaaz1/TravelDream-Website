@@ -28,6 +28,12 @@ while($row = mysqli_fetch_assoc($res)) {
 <body>
 <!-- قسم الهيدر -->
 <section class="header">
+    
+    <!-- فيديو الجمال -->
+    <video class="header-video" autoplay muted loop playsinline>
+        <source src="images/saudi/c2.mp4" type="video/mp4">
+    </video>
+     
 <nav>
     <div class="nav-links">
         <ul>
@@ -42,7 +48,9 @@ while($row = mysqli_fetch_assoc($res)) {
     <h1>اهلًا بكم في السعودية</h1>
     <p>السعودية وطن يجمع بين أصالة الماضي وروعة الحاضر تمتد جذوره في التاريخ وتزدهر رؤيته نحو مستقبل يليق بعظمته</p>
 </div>
+ 
 </section>
+
 
 <!-- قسم المعالم -->
 <section class="landmark">
