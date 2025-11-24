@@ -31,10 +31,10 @@ while($row = mysqli_fetch_assoc($res)) {
 <nav>
     <div class="nav-links">
         <ul>
-            <li><a href="">الرئيسية</a></li>
-            <li><a href="">اليابان</a></li>
-            <li><a href="">فرنسا</a></li>
-            <li><a href="">السعودية</a></li>
+            <li><a href="index.php">الرئيسية</a></li>
+            <li><a href="japan.php">اليابان</a></li>
+            <li><a href="switzerland.php">سويسرا</a></li>
+            <li><a href="saudi.php">السعودية</a></li>
         </ul>
     </div>
 </nav>
