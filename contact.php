@@ -30,7 +30,7 @@
     <h1>Contact Us</h1>
   </div>
         <img src="images/Contact/Switzerland3.jpg" alt="">
-        <h2 id="conh2"> تواصل معنا </h2>
+       
     </div>
 
 
@@ -55,6 +55,9 @@
       </div>
 
 
+<footer class="footer">
+   2025 © TravelDream
+</footer>
 
 </body>
 </html>

@@ -25,7 +25,7 @@ $plans_result = $conn->query("SELECT * FROM trip_plans ORDER BY id DESC LIMIT 3"
 <html lang="ar" dir="rtl">
 
 <head>
-  <title>TravelDream</title>
+  <title>TravelDream - الرئيسية</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/home.css">
 
