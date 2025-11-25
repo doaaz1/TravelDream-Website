@@ -65,34 +65,34 @@ $plans_result = $conn->query("SELECT * FROM trip_plans ORDER BY id DESC LIMIT 3"
 <div class="gallery">
 
     <div class="card">
-      <a href="japan.php" class="links">
+      <a href="japan.php" target="_blank" class="links">
         <img src="images/home/japan1.jpg" alt="اليابان">
         <div class="box">
             <h3>اليابان</h3>
             <p>استمتع بتجربة ثقافية غنية تجمع بين التقليد والحداثة</p>
-            <a href="japan.php" class="btn">اكتشف المزيد</a>
+            <a href="japan.php" target="_blank" class="btn">اكتشف المزيد</a>
         </div>
         </a>
     </div>
 
     <div class="card">
-      <a href="saudi.php" class="links">
+      <a href="saudi.php" target="_blank" class="links">
         <img src="images/home/saudi3.jpg" alt="السعوديه">
         <div class="box">
             <h3>السعودية</h3>
             <p>رحلة عبر التاريخ والثقافة مع المعالم السياحية في مكة والمدينة</p>
-            <a href="saudi.php" class="btn">اكتشف المزيد</a> 
+            <a href="saudi.php" target="_blank" class="btn">اكتشف المزيد</a> 
           </div>
           </a>
     </div>
 
     <div class="card">
-      <a href="switzerland.php" class="links">
+      <a href="switzerland.php" target="_blank" class="links">
         <img src="images/home/Switzerland1.jpg" alt="سويسرا">
         <div class="box">
             <h3>سويسرا</h3>
             <p> وجهة مثالية لعشّاق الطبيعة حيث الهدوء يلتقي بروعة المناظر الجبلية</p>
-            <a href="switzerland.php" class="btn">اكتشف المزيد</a> 
+            <a href="switzerland.php" target="_blank" class="btn">اكتشف المزيد</a> 
           </div>
       </a>
     </div>
@@ -175,7 +175,7 @@ if ($plans_result->num_rows > 0) {
           نرافقك في رحلتك لاكتشاف أجمل المدن حول العالم
         </p>
 
-        <a href="contact.php" class="footer-btn">تواصل معنا</a>
+        <a href="contact.php" target="_blank" class="footer-btn">تواصل معنا</a>
 
         <p class="footer-copy">TravelDream © 2025 </p>
     </div>
