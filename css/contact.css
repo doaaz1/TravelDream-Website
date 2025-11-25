@@ -28,7 +28,7 @@ body {
 .imghead {
   position: relative;
   width: 100%;
-  height: 900px; /* يمكن تعديل الارتفاع حسب الحاجة */
+  height: 600px; /* يمكن تعديل الارتفاع حسب الحاجة */
   overflow: hidden;
 }
 
@@ -53,13 +53,22 @@ body {
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* يضيف ظل للنص لجعله أكثر وضوحاً */
 }
 
+#contact-text {
+  font-size: 20px;
+  color: #333;
+text-align: center;
+ margin-top: 70px;
+margin-bottom: 30px;
+ line-height: 1.5;
+}
+
 /* تنسيق نموذج الاتصال */
 .contact-form {
   background-color: #ffffff; /* الخلفية البيضاء */
   padding: 40px;
   border-radius: 20px; /* زوايا أكثر نعومة */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل أكبر وأكثر وضوحًا */
-  margin-top: -80px; /* تعديل المسافة لتقريب النموذج */
+  margin-top: -60px; /* تعديل المسافة لتقريب النموذج */
   max-width: 600px; /* تحديد عرض أقصى للنموذج */
   width: 100%;
   margin-left: auto;
@@ -92,18 +101,19 @@ body {
 
 /* تنسيق الزر */
 .btn-primary {
-  background: #4CAF50; /* اللون البنفسجي */
+  background: #4CAF50; 
   color: white;
   border: none;
   cursor: pointer;
   font-size: 16px;
   padding: 15px 30px;
   border-radius: 25px; /* زوايا دائرية أكثر */
-  transition: background 0.3s ease; /* تأثير على تغيير اللون */
+transition: background 0.3s ease, transform 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
-  background: #9d6cb3; /* تغيير اللون عند التمرير على الزر */
+  background: #6c757d; /* تغيير اللون عند التمرير على الزر */
+  transform: scale(1.05);
 }
 
 /* تنسيق الحقول داخل النموذج */
@@ -123,16 +133,43 @@ body {
   text-align: center;      
 }
 
-/* استجابة للأحجام الكبيرة */
-@media (min-width: 1200px) {
-    .contact-form {
-        width: 50%; /* زيادة العرض في الشاشات الكبيرة */
-    }
-}
-
 .footer {
     text-align: center;
     padding: 20px;
     color: #868686;
     font-size: 0.85rem;
+}
+
+
+/* -- للجوال -- */
+
+@media(max-width: 600px) {
+  /* تعديل الفراغ بين العناصر */
+  .items-grid {
+    gap: 16px; 
+  }
+
+  /* جعل العناصر في النموذج تكون بشكل متناسب مع الشاشة الصغيرة */
+  .contact-form {
+    padding: 20px; 
+    width: 90%; 
+  }
+
+  /* تعديل حجم الخط في بعض العناصر */
+  #contact-text {
+    font-size: 18px; 
+    margin-top: 20px;
+  }
+
+  /* تعديل حجم الأزرار */
+  .btn-primary {
+    padding: 12px 24px; 
+    font-size: 14px; 
+  }
+
+  /* تعديل حجم المدخلات */
+  .form-control {
+    font-size: 14px; 
+    padding: 12px; 
+  }
 }
