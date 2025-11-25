@@ -5,7 +5,7 @@ body {
 
     header {
       
-      padding: 15px;
+      padding: 10px;
       border-bottom: 1px solid #ddd;
     }
 
@@ -50,7 +50,7 @@ body {
   color: white; /* يجعل النص أبيض */
   font-size: 20px; /* يمكنك تعديل حجم النص حسب الحاجة */
   font-weight: bold;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* يضيف ظل للنص لجعله أكثر وضوحاً */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* يضيف ظل للنص لجعله أكثر وضوحاً */
 }
 
 #contact-text {
