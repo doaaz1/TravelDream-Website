@@ -187,7 +187,7 @@ include 'includes/db_connect.php'; // ربط قاعدة البيانات
         }
         echo "</div>";
     } else {
-        echo "<p class='no-tips'>لابوجد نصائح حتى الآن</p>";
+        echo "<p class='no-tips'>لاتوجد نصائح حتى الآن</p>";
     }
     ?>
 </section>
