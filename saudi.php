@@ -102,16 +102,17 @@ include("includes/db_connect.php");
         </p>
 </div>
 <!-- ====== الخريطة السياحية للسعودية ====== -->
+<section class="sa-map-section">
+    <h2>الخريطة السياحية للسعودية</h2>
+    <p class="sa-map-p">استكشف موقع أشهر المدن والمعالم في المملكة العربية السعودية.</p>
 
-<section class="map-section">
-    <h2> الخريطة السياحية للسعودية</h2>
-    <div class="map-box">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14944180.10570684!2d55.71655763603287!3d23.872539915114476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2z2KfZhNiz2LnZiNiv2YrYqQ!5e0!3m2!1sar!2ssa!4v1764205251108!5m2!1sar!2ssa" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
+    <div class="sa-map-box">
+        <iframe
+            src="https://www.google.com/maps?q=Saudi%20Arabia&output=embed"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
     </div>
-
 </section>
 <!-- قسم النصائح -->
 <section class="tips-section">
