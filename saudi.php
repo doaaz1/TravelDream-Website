@@ -113,7 +113,7 @@ include("includes/db_connect.php");
     </div>
 
 </section>
-<!-- قسم النصائخ -->
+<!-- قسم النصائح -->
 <section class="tips-section">
     <div class="tips-box">
         <h1 class="tips-title">من صوت الزائر</h1>
