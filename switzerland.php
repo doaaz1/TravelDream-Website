@@ -91,6 +91,20 @@
         </div>
     </div>
 
+<!-- الخريطة السياحية -->
+<section class="section">
+    <h2> الخريطة السياحية لسويسرا🗺️</h2>
+    <p class="section-desc">استكشف موقع أشهر المدن والمعالم السويسرية.</p>
+
+    <div class="map-box">
+        <iframe
+            src="https://www.google.com/maps?q=Switzerland&output=embed"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
     <!-- قسم النصائح  -->
     <div id="tips" class="section-box">
         <h2>نصائح الزوار</h2>

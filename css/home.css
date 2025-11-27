@@ -10,10 +10,10 @@
     }
 
     nav ul {
-      display: flex;/* يحوّل القائمة لصف */
+      display: flex;
       gap: 30px;
       list-style: none;
-      justify-content: center;/* يوسّط العناصر */
+      justify-content: center;
     }
 
     nav a {
@@ -102,7 +102,7 @@
     margin-bottom: 100px;
     transition: transform 0.3s ease;
     text-align: center; 
-    cursor: pointer; /* يجعل الكارد تظهر كعنصر قابل للنقر */
+    cursor: pointer; 
     
 }
 /* تأثير تكبير الكارد  */
