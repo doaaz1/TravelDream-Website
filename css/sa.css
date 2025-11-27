@@ -25,10 +25,10 @@ color: rgba(255,255,255,0.9); }
 
 .landmark { background: #f5e9dd; padding: 60px 7%; min-height: 60vh;
 text-align: center; }
-.landmark h1 , .titlea { font-size: 30px; font-weight: 700; color: #5d5652;
+.landmark h1 , .titlea  { font-size: 30px; font-weight: 700; color: #5d5652;
 text-shadow: 2px 2px 6px rgba(0,0,0,0.2); margin-bottom: 10px;
  text-align: right; }
-.landmark p , .food p { font-size: 18px; color: rgba(101,81,70,0.695);
+.landmark p , .food p  { font-size: 18px; color: rgba(101,81,70,0.695);
  text-shadow: 2px 2px 6px rgba(0,0,0,0.2); text-align:right;
 margin-bottom:30px; }
 .row { display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; }
@@ -63,7 +63,7 @@ font-weight:600; }
 .food-card p { font-size:14px; color:#7d5a50; }
 
 /* ===== رؤيه 2030 ===== */
-.vision-box { position:relative; width:96%; max-width:1600px; margin:0 auto 50px;
+.vision-box { position:relative; width:96%; max-width:1600px; margin:0 auto 180px;
 height:70vh; padding:90px 7%; border-radius:20px; overflow:hidden;
 text-align:center; background:rgba(0,0,0,0.4);
 color:#fff; box-shadow:0 10px 30px rgba(0,0,0,0.3);
@@ -74,7 +74,29 @@ text-shadow:2px 2px 10px rgba(0,0,0,0.5); }
 .vision-box p { font-size:18px; line-height:1.6;
 text-shadow:1px 1px 6px rgba(0,0,0,0.5); }
 
-/* ===== جزئيه التلميحات ===== */
+/* الخريطه*/
+.map-box {
+    max-width:500px;
+    margin:0 auto 30px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(15,23,42,0.15);
+}
+.map-box iframe {
+    width:200%;
+    height:300px;
+    border:0;
+}
+.map-section h2{
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #5d5652;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== جزئيه النصائح ===== */
 
 .tips-section {
 display:flex;
@@ -82,7 +104,7 @@ justify-content:center;
 align-items:center; 
 min-height:80vh; 
 padding:40px 20px; 
-margin-bottom:50px; }
+margin:150px 0 30px; }
 .tips-box { 
 position:relative; 
 width:90%; max-width:1000px; height:60vh;
@@ -99,7 +121,7 @@ margin-bottom:12px; text-shadow:2px 2px 10px rgba(255,255,255,0.7); }
 .tips-form { display:flex; flex-direction:column; gap:15px; width:100%;
  max-width:500px; margin:0 auto; }
 .tips-form input, .tips-form textarea { padding:14px; border-radius:14px; 
-border:none; background:rgba(255,255,255,0.85); font-size:15px; }
+border:none; background:rgba(255,2555,255,0.85); font-size:15px; }
 .tips-form button { background:#000; color:#fff; padding:15px; 
 border-radius:50px; border:none; cursor:pointer; font-size:16px; transition:0.3s; }
 .tips-form button:hover { opacity:.5; }
