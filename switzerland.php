@@ -128,7 +128,7 @@
                 <input type="text" name="username" required placeholder="مثال: سمية">
             </label>
 
-            <label>تعليقك:
+            <label>نصيحتك:
                 <textarea name="tip_text" required rows="3" placeholder="مثال: احجزي القطار مبكرًا!"></textarea>
             </label>
 
@@ -146,14 +146,14 @@ if (isset($_POST['send_tip'])) {
             VALUES ('$name', '$tip', 'SW')";
 
     if ($conn->query($sql)) {
-        echo "<p>✔ تم حفظ تلميحك بنجاح!</p>";
+        echo "<p>✔ تم حفظ تعليقك بنجاح!</p>";
     } else {
         echo "<p>❌ خطأ: " . $conn->error . "</p>";
     }
 }
 ?>
         <!-- عرض  -->
-        <h3>تلميحات الزوار السابقة:</h3>
+        <h3>نصائح الزوار السابقة:</h3>
        <?php
 $result = $conn->query("SELECT username, tip_text FROM tips WHERE country='SW' ORDER BY id DESC");
 
@@ -164,7 +164,7 @@ if ($result->num_rows > 0) {
     }
     echo "</div>";
 } else {
-    echo "<p>لا توجد تلميحات بعد</p>";
+    echo "<p>لا توجد نصائح بعد</p>";
 }
 ?>
 
