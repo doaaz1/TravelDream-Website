@@ -9,7 +9,7 @@ html, body {
     padding: 0;
     direction: rtl;
     font-family: 'Tajawal','Cairo', sans-serif;
-    background: #e0f2fe; /* خلفية سماوية */
+    background: #e0f2fe;
 }
 
 .container {
@@ -67,41 +67,52 @@ nav a:hover,
 nav a.active {
     text-decoration: underline;
 }
+
 .hero-text {
     margin-top: 45px;
 }
+
 .hero-text h1 {
     margin: 4px 0;
     font-size: 2.2rem;
 }
+
 .hero-desc {
     max-width: 450px;
     margin: 0;
 }
+
 /*  الأقسام  */
-.section-box { margin: 40px 0; }
+.section-box {
+    margin: 40px 0;
+}
+
 .section-note {
     color: #6b7280;
     margin-bottom: 15px;
 }
+
 /*  بطاقات الأماكن والأكلات  */
 .items-grid {
     display: grid;
     gap: 22px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
 .item-card {
-    background: #fff9f3; /* بيج  */
+    background: #fff9f3;
     border-radius: 16px;
     padding: 14px;
     border: 1px solid #e7dccc;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     transition: .25s ease;
 }
+
 .item-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
+
 .item-img {
     width: 100%;
     height: 170px;
@@ -109,6 +120,7 @@ nav a.active {
     border-radius: 12px;
     margin-bottom: 12px;
 }
+
 /*  الثقافة السويسرية  */
 .culture-banner {
     position: relative;
@@ -117,7 +129,6 @@ nav a.active {
     background-image: url('../images/switzerland/4.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 0;
     margin: 70px 0;
     overflow: hidden;
 }
@@ -126,7 +137,7 @@ nav a.active {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45); 
+    background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(2px);
     z-index: 1;
 }
@@ -153,16 +164,11 @@ nav a.active {
     font-size: 17px;
     line-height: 1.8;
 }
-/* خريطة سويسرا */
+
+/*  الخريطة  */
 .section {
     margin: 40px 0;
     text-align: center;
-}
-
-.section h2 {
-    font-size: 1.7rem;
-    color: #0f172a;
-    margin-bottom: 8px;
 }
 
 .section-desc {
@@ -171,9 +177,8 @@ nav a.active {
     font-size: 1rem;
 }
 
-/* صندوق الخريطة */
 .map-box {
-    background: #fff9f3; 
+    background: #fff9f3;
     padding: 18px;
     border-radius: 16px;
     border: 1px solid #e7dccc;
@@ -182,7 +187,6 @@ nav a.active {
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* إطار الخريطة */
 .map-box iframe {
     width: 100%;
     height: 400px;
@@ -214,7 +218,6 @@ nav a.active {
     border-radius: 10px;
     padding: 10px;
     width: 100%;
-    font-family: inherit;
 }
 
 #tips button {
@@ -229,9 +232,11 @@ nav a.active {
     transition: .25s ease;
 }
 
-#tips button:hover { background: #704523; }
+#tips button:hover {
+    background: #704523;
+}
 
-/*  النصائح القديمة  */
+/*  نصائح الزوار القديمة  */
 .tip-item {
     background: #fffdf7;
     border: 1px solid #e8dccd;
@@ -257,17 +262,17 @@ nav a.active {
 .snowflake {
     position: fixed;
     top: -10px;
-    background: white;
+    background-color: white;
     border-radius: 50%;
-    box-shadow: 0 0 8px rgba(255,255,255,0.9);
-    opacity: 0.9;
+    opacity: 0.8;
     pointer-events: none;
-    animation: fall linear infinite;
+    animation-name: fall;
+    animation-timing-function: linear;
 }
 
 @keyframes fall {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(110vh); opacity: .3; }
+    from { transform: translateY(0); }
+    to   { transform: translateY(100vh); }
 }
 
 /*  للجوال  */
