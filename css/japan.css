@@ -1,4 +1,4 @@
-/* ===== الأساسيات ===== */
+/*  الأساسيات  */
 * {
     box-sizing: border-box;
     direction: rtl;
@@ -7,23 +7,23 @@
 body {
     margin: 0;
     font-family: "Tajawal", sans-serif;
-    background: #ffe5ee;        /* خلفية موحدة وردية ناعمة */
+    background: #ffe5ee;        /* خلفية موحدة وردية  */
     color: #111827;
 }
 
 main { margin-top: 80px; }
 
 
-/* ===== الهيدر / الهيرو بالفيديو ===== */
+/*  الهيدر / الهيرو بالفيديو  */
 .hero {
     position: relative;
-    height: 280px;        /* ارتفاع البانر */
+    height: 280px;        
     overflow: hidden;
     color: #fff;
     background: none !important; 
 }
 
-/* الفيديو في الخلفية */
+
 .hero-video {
     position: absolute;
     top: 50%;
@@ -46,7 +46,7 @@ main { margin-top: 80px; }
     z-index: 1;
 }
 
-/* المحتوى فوق الفيديو */
+
 .hero-overlay {
     position: relative;
     padding: 16px;
@@ -92,7 +92,7 @@ nav a.active {
 
 
 
-/* ===== الأقسام العامة ===== */
+/*  الأقسام العامة  */
 .section {
     padding: 60px 7%;
 }
@@ -111,12 +111,12 @@ nav a.active {
 
 
 
-/* ===== الكروت ===== */
+/*  الكروت  */
 .card-grid {
     display: flex;
     justify-content: center;
     gap: 24px;
-    flex-wrap: nowrap;      /* صف واحد */
+    flex-wrap: nowrap;    
 }
 
 .card {
@@ -143,13 +143,13 @@ nav a.active {
     box-shadow: 0 20px 40px rgba(15,23,42,0.25);
 }
 
-/* للجوالات */
+
 @media (max-width: 768px) {
     .card-grid { flex-wrap: wrap; }
 }
 
 
-/* ===== كارد الخريطة ===== */
+/*  كارد الخريطة  */
 .map-box {
     max-width: 700px;
     margin: 0 auto;
@@ -170,7 +170,7 @@ nav a.active {
 }
 
 
-/* ===== الثقافة + الخريطة ===== */
+/*  الثقافة + الخريطة  */
 .culture-map-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -201,7 +201,7 @@ nav a.active {
 }
 
 
-/* ===== النصائح ===== */
+/*  النصائح  */
 input::placeholder,
 textarea::placeholder {
     font-family: "Tajawal", sans-serif;
@@ -286,7 +286,7 @@ textarea::placeholder {
 }
 
 
-/* ===== الفوتر ===== */
+/*  الفوتر  */
 .footer {
     background: #47052c;
     color: #fff;

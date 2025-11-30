@@ -1,4 +1,4 @@
-// ===== تأثير الميلان مع الماوس للكروت =====
+
 const tiltCards = document.querySelectorAll(".tilt");
 
 tiltCards.forEach(card => {
@@ -21,7 +21,7 @@ tiltCards.forEach(card => {
     });
 });
 
-// ===== أنيميشن عند السكروول =====
+
 const animatedItems = document.querySelectorAll(".animate-on-scroll");
 
 const observer = new IntersectionObserver(entries => {
