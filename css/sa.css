@@ -109,7 +109,6 @@ text-shadow:1px 1px 6px rgba(0,0,0,0.5); }
 
 /* ===== جزئيه النصائح ===== */
 
-
 .tips-section {  display:flex; justify-content:center;  align-items:center; 
      padding:50px 20px;  margin:150px 0 30px;}
 .tips-box {  position:relative; width:90%;  max-width:1000px; margin:0 auto 90px;  padding:60px 35px; 

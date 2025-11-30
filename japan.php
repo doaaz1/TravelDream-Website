@@ -191,14 +191,11 @@ include 'includes/db_connect.php'; // ربط قاعدة البيانات
     }
     ?>
 </section>
-
-
 </main>
 
 <footer class="footer">
     <p>TravelDream © 2025</p>
 </footer>
-<script src="js/sakura.js"></script>
 <script src="js/japan.js" defer></script>
 </body>
 </html>
