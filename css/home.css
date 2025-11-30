@@ -165,9 +165,7 @@
 }
 
 /*
- خطة الرحلة
-    */
-/* صندوق كامل */
+ خطة الرحلة */
 .trip-box {
     background: #ffffffee;
     padding: 30px;
@@ -177,7 +175,6 @@
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(4px);
 }
-
 /* عنوان القسم */
 .trip-title {
     text-align: center;
@@ -186,8 +183,6 @@
     color: #2f2f2f;
     margin-bottom: 10px;
 }
-
-/* جملة قصيرة جذابة */
 .trip-intro {
     text-align: center;
     background: linear-gradient(to right, #f6f1e9, #fdfcf9);
