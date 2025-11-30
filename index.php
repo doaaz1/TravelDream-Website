@@ -1,21 +1,25 @@
 <?php include("includes/db_connect.php"); ?>
-<?php
 
-// إذا تم إرسال نموذج خطة الرحلة
+<?php
+// إذا تم إرسال نموذج الخطة
 if (isset($_POST['submit_plan'])) {
 
-    $country = $_POST['country'];
-    $start   = $_POST['start'];
-    $end     = $_POST['end'];
-    $budget  = $_POST['budget'];
+    $country = $conn->real_escape_string($_POST['country']);
+    $start   = $conn->real_escape_string($_POST['start']);
+    $end     = $conn->real_escape_string($_POST['end']);
+    $budget  = $conn->real_escape_string($_POST['budget']);
 
+    // حفظ الخطة
     $sql = "INSERT INTO trip_plans (country, start_date, end_date, budget)
             VALUES ('$country', '$start', '$end', '$budget')";
 
-    if (!$conn->query($sql)) {
-        echo "<p>خطأ في حفظ الخطة: " . $conn->error . "</p>";
+    if ($conn->query($sql)) {
+        echo "<p class='success-msg'>✔️ تم حفظ خطتك بنجاح!</p>";
+    } else {
+        echo "<p class='error-msg'>❌ خطأ في الحفظ: {$conn->error}</p>";
     }
-} 
+}
+
 // جلب آخر 3 خطط
 $plans_result = $conn->query("SELECT * FROM trip_plans ORDER BY id DESC LIMIT 3");
 ?>
@@ -51,7 +55,7 @@ $plans_result = $conn->query("SELECT * FROM trip_plans ORDER BY id DESC LIMIT 3"
   <div class="entry-content">
     <h1>سافر بعقلك</h1>
      <p>  وجهات تحلم بها وتجارب تستحق أن تُروى ... اختر مغامرتك القادمة</p>
-   <!-- <p>رحلة خفيفة تخليك تتخيل الأجواء قبل ما تسافر فعليًا.</p>-->
+  
    <!-- <a href="#destinations" class="btn">START</a> -->
   </div>
 </section>
