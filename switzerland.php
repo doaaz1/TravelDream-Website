@@ -76,6 +76,7 @@
                 <h3>روستي</h3>
                 <p> بطاطس مبشورة محمرة بطريقة لذيذة.</p>
             </div>
+
             <div class="item-card">
                 <img src="images/switzerland/rosti.jpg" class="item-img">
                 <h3>فوندو الجبن</h3>
@@ -90,6 +91,7 @@
 
         </div>
     </div>
+
 <!--  الثقافة السويسرية  -->
 <section class="culture-banner">
     <div class="culture-content">
@@ -104,7 +106,7 @@
 
 <!-- الخريطة السياحية -->
 <section class="section">
-    <h2> الخريطة السياحية لسويسرا🗺️</h2>
+    <h2> الخريطة السياحية لسويسرا🗺</h2>
     <p class="section-desc">استكشف موقع أشهر المدن والمعالم السويسرية.</p>
 
     <div class="map-box">
@@ -127,7 +129,6 @@
             <label>اسمك:
                 <input type="text" name="username" required placeholder="مثال: سمية">
             </label>
-
             <label>نصيحتك:
                 <textarea name="tip_text" required rows="3" placeholder="مثال: احجزي القطار مبكرًا!"></textarea>
             </label>
@@ -139,14 +140,14 @@
       <?php
 if (isset($_POST['send_tip'])) {
 
-    $name = $_POST['username'];
-    $tip  = $_POST['tip_text'];
+    $name = $conn->real_escape_string($_POST['username']);
+    $tip  = $conn->real_escape_string($_POST['tip_text']);
 
     $sql = "INSERT INTO tips (username, tip_text, country)
             VALUES ('$name', '$tip', 'SW')";
 
     if ($conn->query($sql)) {
-        echo "<p>✔ تم حفظ تعليقك بنجاح!</p>";
+        echo "<p>✔️ تم حفظ تعليقك بنجاح!</p>";
     } else {
         echo "<p>❌ خطأ: " . $conn->error . "</p>";
     }
@@ -170,7 +171,6 @@ if ($result->num_rows > 0) {
 
     </div>
 </div>
-
 
 <footer class="footer">
    2025 © TravelDream

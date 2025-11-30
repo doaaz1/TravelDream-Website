@@ -1,19 +1,29 @@
-//حركه الثلج 
-    function createSnow() {
-        const snow = document.createElement("div");
-        snow.classList.add("snowflake");
+// حركة الثلج
+function createSnow() {
 
-        const size = Math.random() * 4 + 2; 
-        snow.style.width = `${size}px`;
-        snow.style.height = `${size}px`;
+    // إنشاء عنصر جديد للثلج
+    const snow = document.createElement("div");
+    snow.classList.add("snowflake");
 
-        snow.style.left = Math.random() * window.innerWidth + "px";
+    // تحديد حجم عشوائي للثلج
+    const size = Math.random() * 4 + 2; 
+    snow.style.width = size + "px";
+    snow.style.height = size + "px";
 
-        snow.style.animationDuration = (3 + Math.random() * 4) + "s";
+    // تحديد مكان السقوط بشكل عشوائي
+    snow.style.left = Math.random() * window.innerWidth + "px";
 
-        document.body.appendChild(snow);
+    // تحديد سرعة السقوط
+    snow.style.animationDuration = (3 + Math.random() * 4) + "s";
 
-        setTimeout(() => snow.remove(), 7000);
-    }
+    // إضافة الثلج للصفحة
+    document.body.appendChild(snow);
 
-    setInterval(createSnow, 200);
+    // الحذف بعد فترة
+    setTimeout(function () {
+        snow.remove();
+    }, 7000);
+}
+
+// تكرار إلانشاء
+setInterval(createSnow, 200);
